@@ -81,6 +81,16 @@ the following form: YYYY.0M.0D.
 - Designed a BudgetPlanner component
 - Designed a InventoryTracker component
 
+## 2025.03.04
+
+### Added
+
+- Designed kernel and enhanced interfaces for ProjectTracker component
+
+### Updated
+
+- Changed proof of concept to include a description of why this component should be created.
+
 [unreleased]: https://github.com/jrg94/portfolio-project/compare/v2024.08.07...HEAD
 [2024.08.07]: https://github.com/jrg94/portfolio-project/compare/v2024.01.07...v2024.08.07
 [2024.01.07]: https://github.com/jrg94/portfolio-project/releases/tag/v2024.01.07
