@@ -1,12 +1,11 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Nandaki Bhonagiri
+- **Dot Number**: bhonagiri.4
+- **Due Date**: 02/04 @ 3:00 PM
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,7 +28,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,7 +50,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +64,6 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,23 +102,16 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+In the future, I want to work in the intersection of business and technology while striving to improve the daily lives of individuals. I hope to optimize existing solutions and create new solutions to problems that were never addressed. I aim to focus in areas of specialization such as cybersecurity which is such an important part of using technology. Optimizing and increasing the amount of security that any user has while using any piece of technology is highly important. I want to be involved in the implentation of this and contribute back to the community by developing in this area of technology. Lastly, I want to work my way up to a positon where I can be a mentor and a leader. I want to inspire others with my work and ideas at work. I want to work hard and be a role model to others while leading a team of individuals.
 
 ## Assignment
 
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -131,8 +120,6 @@ etc. Make of this whatever seems interesting to you, and keep in mind that
 you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,68 +187,92 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: `ProjectTracker`
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose is to provide a project tracker that helps businesses track and plan their projects.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void addMilestone(String milestoneName, String description, String deadline)`: adds to project tracker a milestone with a name, description, and deadline
+    - `void removeMilestone(String milestoneName)`: removes from project tracker a milestone that was previously added
+    - `void updateMilestone(String milestoneName, String status)`: updates the status of a milestone (i.e. "In progress", "Not started", "Completed")
+    - `String getMilestoneInfo(String milestoneName)`: returns the information about a specific milestone
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void calculateProgress()`: calculates the overall progress of a project based on the completed milestones
+    - `void sendReminders()`: sends reminders for approaching milestones
+    `void generateProgressReport(String fileName)`: generates a progress report and exports it as a PDF
+    - `void sortMilestones()`: sorts milestones by their approaching deadlines
+    - `void assignMilestone(String milestoneName, String owner)`: assigns a team member to a specific milestone and makes them the owner
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, the componenet would inherit from the Standard class.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, maybe to keep track of a specific milestone (for example, the name of the milestone, description, deadline, owner, etc.).
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Maybe, to keep track of the max number of milestones that can be added to a project, it could be stored in a constant.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, for example, the calculateProgress method could utilize the getMilestoneInfo method to check the status of each milestone in the project and then calculate the percentage of completed milestones.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: `BudgetPlanner`
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to model a budget planner that helps individuals or businesses plan, track, and manage their finances.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void addIncome(String source, double amount)`: adds an income source (e.g., salary, freelance work) with a specified amount
+    - `void addExpense(String category, double amount)`: adds an expense to a specific category (e.g., groceries, rent) with a specified amount
+    - `void removeIncome(String source)`: removes an income source from the budget
+    - `void removeExpense(String category)`: removes an expense category from the budget
+    - `double getBalance()`: Returns the current balance (total income minus total expenses)
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void categorizeExpense(String category, String subcategory)`: adds a subcategory to an expense category
+    - `void setFinancialGoal(String goalName, double targetAmount)`: sets a financial goal
+    - `void trackGoalProgress(String goalName)`: tracks progress towards a financial goal based on the current balance
+    - `void generateSpendingReport(String fileName)`: generates a spending report and exports it in a PDF format
+    - `void adjustBudget(String category, double newAmount)`: adjusts the budget for a specific category
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, the component would be mutable because it inherits from Standard.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, maybe it would use internal classes like IncomeSource to store details about income and ExpenseCategory to store details about expenses.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, it might use enums like ExpenseType for categorizing expenses and constants like MAX_CATEGORIES to limit the number of expense categories.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, for example, the trackGoalProgress method could use getBalance to compare the current balance with the target amount of a financial goal.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: `InventoryTracker`
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to keep track of the inventory of different products and materials for a warehouse or retail store.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void addProduct(String productName, String category, int quantity, double price)`: adds a product to the inventory with a name, category, quantity, and price
+    - `void removeProduct(String productName)`: removes a product from the inventory
+    - `void updateProductQuantity(String productName, int newQuantity)`: updates the quantity of the specified product
+    - `void updateProductPrice(String productName, double newPrice)`: updates the price of the specified product
+    - `double getProductPrice(String productName)`: returns the price of the specified product
+    - `int getProductQuantity(String productName)`: returns the current quantity of the specified product
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void categorizeProduct(String productName, String newCategory)`: moves a product to a new category
+    - `void setLowStockThreshold(String productName, int threshold)`: sets a low-stock threshold for a product and triggers an alert if the quantity falls below this threshold
+    - `void generateSalesReport(String fileName)`: generates a sales report and exports it in a PDF format
+    - `void restockProduct(String productName, int quantity)`: restocks a product by adding a specified quantity
+    - `void applyDiscount(String productName, double discountPercentage)`: applies a discount to a product's price
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes because the componenet would inherit methods from `Standard` such as add, remove, and update.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes it could use internal classes such as product to store the name and details of a specific product.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't think so.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. For example, the setLowStockThreshold method could use getProductQuantity to check the current quantity of a product and trigger an alert if it falls below the threshold.
 
 ## Post-Assignment
 
@@ -270,7 +281,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -288,16 +298,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## YYYY.MM.DD
+## 2025.02.04
 
 ### Added
 
-- Designed a <!-- insert name of component 1 here --> component
-- Designed a <!-- insert name of component 2 here --> component
-- Designed a <!-- insert name of component 3 here --> component
+- Designed a ProjectTracker component
+- Designed a BudgetPlanner component
+- Designed a InventoryTracker component
 ```
 
-Here `YYYY.MM.DD` would be the date of your submission, such as 2024.04.21.
+Here `2025.02.25` would be the date of your submission, such as 2024.04.21.
 
 You may notice that things are nicely linked in the root CHANGELOG. If you'd
 like to accomplish that, you will need to make GitHub releases after each pull
@@ -309,8 +319,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -319,11 +327,9 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
 
 ### Peer Review
 
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the

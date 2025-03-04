@@ -1,11 +1,14 @@
 # Portfolio Part 2: Component Proof-of-Concept
 
-- **Name**: Nandaki Bhonagiri
-- **Dot Number**: bhonagiri.4
-- **Due Date**: 02/30 @ 3:00 PM
+- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
+- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
+- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
 
 ## Assignment Overview
 
+<!-- TODO: read the assignment overview then delete this comment -->
+
+>>>>>>> interfaces
 Previously, you brainstormed three ideas, and hopefully you got some feedback as
 well. However, it's impossible to know how reasonable your design actually is
 without trying to implement it. Because you're only just learning our full
@@ -109,7 +112,11 @@ Below is further rationale/explanation for the rubric items above:
 > to create a new design. In you do end up picking one at random, you should
 > disclose that here as well.
 
+<<<<<<< HEAD
 The concept of the projectTracker could be useful in a variety of different ways, but is mainly intended for projects that are worked on over a long period of time and require organization. This component could help see progress to keep track of things and see what the next steps are. There are limitations to this design however. It can be used only to name and see different tasks but not describe and see the exact steps or directions of the task.
+=======
+The idea that I prefer the most is the "ProjectTracker" idea. I really like this idea because it is very broad and can be used by a variety of different companies, individuals, etc. It can also be customized for personal use. I feel like I could use this in future as well, so in the field that I want to work in, I see it being relevant.
+>>>>>>> interfaces
 
 > Once you've argued your choice of design, make a branch in your new repo called
 > something like `proof-of-concept`. There are many ways to do this, but my
