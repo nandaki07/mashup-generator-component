@@ -1,8 +1,8 @@
 # Portfolio Part 5: Kernel Implementation
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Nandaki Bhonagiri
+- **Dot Number**: bhonagiri.4
+- **Due Date**: 4/9 @ 3:00 PM
 
 ## Assignment Overview
 
@@ -40,7 +40,6 @@ examples of these.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -120,7 +119,15 @@ Below is further rationale/explanation for the rubric items above:
 > discuss how that representation will be restricted (i.e., by convention)
 > and interpreted (i.e., by correspondence).
 
-<!-- TODO: select a representation and explain why -->
+For the ProjectTracker component, I could use a Map<String, Project> as the internal data structure. This structure will allow each project's name to be stored as a String and its data stored in the Project object. The choice of a Map data structure is ideal because a new project can be easily added to a project map and a project can be removed using its name and it is also easy to check for an existing project using its name. Using a map is a convenient since project names are unique identifiers and each project has associated data that can be stored in each project object. This setup allows for real-world use and will be easier for users to interact with.
+
+Convention:
+- All keys in the map (project names) must be non-null, non-empty, and unique.
+- All values in the map (Project objects) must be non-null.
+
+Correspondence:
+- Each entry in the map <k, v> corresponds to a single tracked project in the abstract ProjectTracker model, where k is the name and v is the associated project data.
+- The entire abstract model is represented as the set of all entries in the map.
 
 > To start making your kernel implementation, make a branch off of main in your
 > new repo called something like `kernel-implementation`. There are many ways to
@@ -142,7 +149,6 @@ Below is further rationale/explanation for the rubric items above:
 > rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 > and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
