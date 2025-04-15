@@ -35,11 +35,60 @@ public abstract class ProjectTrackerSecondary implements ProjectTracker {
     private static final double PERCENTAGE_MULTIPLIER = 100.0;
 
     /**
-     * Calculates the overall progress of a project based on the completed
+     * Returns a hash code value for this {@code ProjectTrackerSecondary}
+     * object. The hash code is computed based on the list of milestones to
+     * ensure consistency with the {@code equals} method.
+     *
+     * @return the hash code value for this object
+     */
+    @Override
+    public int hashCode() {
+        return this.milestones.hashCode();
+    }
+
+    /**
+     * Compares this {@code ProjectTrackerSecondary} to the specified object for
+     * equality. Two {@code ProjectTrackerSecondary} objects are considered
+     * equal if they are of the same class and have the same list of milestones.
+     *
+     * @param obj
+     *            the object to compare with
+     * @return {@code true} if this object is equal to {@code obj},
+     *         {@code false} otherwise
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || this.getClass() != obj.getClass()) {
+            return false;
+        }
+        ProjectTrackerSecondary other = (ProjectTrackerSecondary) obj;
+        return this.milestones.equals(other.milestones);
+    }
+
+    /**
+     * Returns a string representation of this {@code ProjectTrackerSecondary}
+     * object. The string includes the class name and a summary of all
      * milestones.
      *
-     * @updates this
-     * @ensures progress is calculated based on completed milestones
+     * @return a string representation of the project tracker
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.getClass().getSimpleName())
+                .append(" with milestones:\n");
+        for (Milestone milestone : this.milestones) {
+            sb.append(" - ").append(milestone.toString()).append("\n");
+        }
+        return sb.toString();
+    }
+
+    /**
+     * Calculates the overall progress of a project based on the completed
+     * milestones.
      */
     @Override
     public void calculateProgress() {
@@ -57,9 +106,6 @@ public abstract class ProjectTrackerSecondary implements ProjectTracker {
 
     /**
      * Sends reminders for approaching milestones.
-     *
-     * @updates this
-     * @ensures reminders are sent to relevant team members
      */
     @Override
     public void sendReminders() {
@@ -75,11 +121,6 @@ public abstract class ProjectTrackerSecondary implements ProjectTracker {
 
     /**
      * Generates a progress report and exports it as a PDF file.
-     *
-     * @param fileName
-     *            the name of the file to export the progress report to
-     * @requires fileName is a valid string and writable
-     * @ensures a progress report is generated and saved as a PDF file
      */
     @Override
     public void generateProgressReport(String fileName) {
@@ -90,9 +131,6 @@ public abstract class ProjectTrackerSecondary implements ProjectTracker {
 
     /**
      * Sorts milestones by their approaching deadlines.
-     *
-     * @updates this
-     * @ensures milestones are sorted in order of their deadlines
      */
     @Override
     public void sortMilestones() {
@@ -113,13 +151,6 @@ public abstract class ProjectTrackerSecondary implements ProjectTracker {
 
     /**
      * Assigns a team member to a specific milestone and makes them the owner.
-     *
-     * @param milestoneName
-     *            the name of the milestone to be assigned
-     * @param owner
-     *            the name of the team member to assign as the owner
-     * @requires milestoneName and owner are valid strings
-     * @ensures the specified milestone is assigned to the given owner
      */
     @Override
     public void assignMilestone(String milestoneName, String owner) {
