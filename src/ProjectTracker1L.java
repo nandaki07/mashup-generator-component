@@ -5,6 +5,11 @@ import java.util.Map;
 
 /**
  * Kernel implementation for ProjectTracker.
+ *
+ * @convention All keys (milestone names) are unique, non-null, non-empty
+ *             strings.
+ * @correspondence Each entry in the map represents a milestone in the project
+ *                 tracker.
  */
 public class ProjectTracker1L extends ProjectTrackerSecondary {
 
@@ -35,12 +40,6 @@ public class ProjectTracker1L extends ProjectTrackerSecondary {
 
     /**
      * Representation: A map from milestone name to Milestone objects.
-     *
-     * Convention: All keys (milestone names) are unique, non-null, non-empty
-     * strings.
-     *
-     * Correspondence: Each entry in the map represents a milestone in the
-     * project tracker.
      */
     private Map<String, Milestone> milestones;
 
@@ -54,11 +53,12 @@ public class ProjectTracker1L extends ProjectTrackerSecondary {
     @Override
     public void addMilestone(String milestoneName, String description,
             String deadline) {
-        if (milestoneName == null || description == null || deadline == null
-                || milestoneName.isEmpty()) {
-            throw new IllegalArgumentException(
-                    "Milestone inputs must be non-null and valid.");
-        }
+        assert milestoneName != null : "Violation of: milestoneName is not null";
+        assert description != null : "Violation of: description is not null";
+        assert deadline != null : "Violation of: deadline is not null";
+        assert !milestoneName
+                .isEmpty() : "Violation of: milestoneName is not empty";
+
         this.milestones.put(milestoneName,
                 new Milestone(milestoneName, description, deadline));
     }
@@ -73,8 +73,9 @@ public class ProjectTracker1L extends ProjectTrackerSecondary {
 
     @Override
     public void updateMilestone(String milestoneName, String status) {
+        assert status == null : "Violation of: status is null";
         Milestone m = this.milestones.get(milestoneName);
-        if (m == null || status == null) {
+        if (m == null) {
             throw new IllegalArgumentException("Invalid milestone or status.");
         }
         m.status = status;
@@ -82,10 +83,6 @@ public class ProjectTracker1L extends ProjectTrackerSecondary {
 
     /**
      * Returns milestone information as a formatted string.
-     *
-     * @param milestoneName
-     *            the name of the milestone to retrieve
-     * @return details of the milestone
      */
     @Override
     public String getMilestoneInfo(String milestoneName) {
