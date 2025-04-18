@@ -2,11 +2,12 @@
 
 - **Name**: Nandaki Bhonagiri
 - **Dot Number**: bhonagiri.4
-- **Due Date**: 03/19 @ 3:00 PM
+- **Due Date**: 02/19 @ 3:00 PM
 
 ## Assignment Overview
 
 
+>>>>>>> interfaces
 Previously, you brainstormed three ideas, and hopefully you got some feedback as
 well. However, it's impossible to know how reasonable your design actually is
 without trying to implement it. Because you're only just learning our full
@@ -110,7 +111,7 @@ Below is further rationale/explanation for the rubric items above:
 > to create a new design. In you do end up picking one at random, you should
 > disclose that here as well.
 
-The idea that I prefer the most is the "ProjectTracker" idea. I really like this idea because it is very broad and can be used by a variety of different companies, individuals, etc. It can also be customized for personal use. I feel like I could use this in future as well, so in the field that I want to work in, I see it being relevant.
+The concept of the projectTracker could be useful in a variety of different ways, but is mainly intended for projects that are worked on over a long period of time and require organization. This component could help see progress to keep track of things and see what the next steps are. There are limitations to this design however. It can be used only to name and see different tasks but not describe and see the exact steps or directions of the task.
 
 > Once you've argued your choice of design, make a branch in your new repo called
 > something like `proof-of-concept`. There are many ways to do this, but my
@@ -121,7 +122,6 @@ The idea that I prefer the most is the "ProjectTracker" idea. I really like this
 > we'll want a branch that you can later make a pull request from with all
 > your changes.
 
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -148,7 +148,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -183,8 +182,6 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
 request of all your changes. Pull requests are pretty easy to make if you're
@@ -206,7 +203,6 @@ to look over your changes. Otherwise, you defer needed changes to later pull
 requests, which could sacrifice the overall quality of your work or result in
 major rework.
 
-<!-- TODO: paste the URL to Carmen then delete this comment -->
 
 ### Peer Review
 

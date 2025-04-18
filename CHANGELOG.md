@@ -26,6 +26,17 @@ the following form: YYYY.0M.0D.
 ### Updated
 - Adjusted design to include additional secondary methods.
 
+## [2025.03.20]
+
+### Added
+
+- Designed a proof of concept for ProjectTracker component
+
+### Updated
+
+- Changed design to not have a milestone object so it is easier to code for now but future implementation will consist of a milestone object.
+
+
 ## [2024.12.30]
 
 - Added table-based rubrics to all 6 parts of the project
