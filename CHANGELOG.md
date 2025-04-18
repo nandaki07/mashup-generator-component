@@ -8,6 +8,24 @@ the following form: YYYY.0M.0D.
 
 ## [Unreleased]
 
+## [2025.03.04]
+
+### Added
+
+- Designed kernel and enhanced interfaces for ProjectTracker component
+
+### Updated
+
+- Changed proof of concept to include a description of why this component should be created.
+
+## 2025.03.25
+
+### Added
+- Implemented abstract class `ProjectTrackerSecondary`.
+
+### Updated
+- Adjusted design to include additional secondary methods.
+
 ## [2024.12.30]
 
 - Added table-based rubrics to all 6 parts of the project
