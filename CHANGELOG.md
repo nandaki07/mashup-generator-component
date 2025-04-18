@@ -91,6 +91,13 @@ the following form: YYYY.0M.0D.
 
 - Changed proof of concept to include a description of why this component should be created.
 
+## 2025.04.09
+
+### Added
+
+- Designed kernel implementation for ProjectTracker component
+
+
 [unreleased]: https://github.com/jrg94/portfolio-project/compare/v2024.08.07...HEAD
 [2024.08.07]: https://github.com/jrg94/portfolio-project/compare/v2024.01.07...v2024.08.07
 [2024.01.07]: https://github.com/jrg94/portfolio-project/releases/tag/v2024.01.07
