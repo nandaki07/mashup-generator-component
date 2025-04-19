@@ -73,7 +73,7 @@ public class ProjectTracker1L extends ProjectTrackerSecondary {
 
     @Override
     public void updateMilestone(String milestoneName, String status) {
-        assert status == null : "Violation of: status is null";
+        assert status == null : "Violation of: status is not null";
         Milestone m = this.milestones.get(milestoneName);
         if (m == null) {
             throw new IllegalArgumentException("Invalid milestone or status.");
@@ -103,5 +103,11 @@ public class ProjectTracker1L extends ProjectTrackerSecondary {
     @Override
     public ProjectTracker1L newInstance() {
         return new ProjectTracker1L();
+    }
+
+    @Override
+    public int compareTo(ProjectTracker proj) {
+        return Integer.compare(this.milestones.size(),
+                ((ProjectTracker1L) proj).milestones.size());
     }
 }

@@ -1,3 +1,5 @@
+package components.projecttracker;
+
 public class Milestone {
     /** The name of the milestone. */
     private String name;

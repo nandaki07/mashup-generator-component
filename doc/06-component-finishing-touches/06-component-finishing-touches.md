@@ -141,7 +141,6 @@ to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -307,18 +306,32 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+Now that I’ve completed the portfolio project, I feel like I have a much better understanding of what software development is really like. Building a software component from scratch involved so much more than just writing code, it required design thinking, planning how different parts would interact, testing thoroughly, and writing clear documentation. All of those steps made the experience feel much more like “real world” development than many previous assignments I’ve done.
+
+What surprised me most was how iterative the process is. I’d often write something, realize it didn’t quite fit with the rest of the system, and have to refactor or even scrap and redo it. That’s something I’ve read about, but now I really get why flexibility and maintainability matter so much in code design.
+
+Overall, this project bridged a gap for me between academic learning and actual development practices. It gave me a small taste of what it's like to build something that someone else might actually use, and that’s a big step toward being career-ready.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+Yes, working on the portfolio project definitely highlighted a few gaps in my software development knowledge. One major gap was in designing interfaces and abstract classes that follow a clean and scalable architecture. Early on, I realized I wasn’t entirely confident in how to structure a component in a way that separates concerns properly, which is critical for maintainability. I had to do a lot of reviewing and learning about Java interfaces, abstract classes, and proper use of inheritance to address this.
+
+Another area was testing. Writing meaningful JUnit tests seemed straightforward at first, but I quickly discovered that testing edge cases and ensuring full coverage takes deliberate thought. I had to learn how to simulate realistic use cases, and how to structure my tests so that they could clearly reflect different parts of the component’s functionality.
+
+Lastly, documentation was harder than I expected. I learned that explaining how and why something works is just as important as the code itself, especially if others (or even future me) are going to use or maintain the component.
+
+To address these gaps, I relied on documentation, tutorials, and examples from class. I also asked questions, iterated on my design, and used feedback from peers to improve. I came out of it much stronger in both my technical skills and my ability to learn independently.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+Completing the portfolio project definitely shifted my perspective on software development in a meaningful way. Before, I saw software development mostly as writing code that works—but now I see how much of it is really about designing systems that are usable, adaptable, and maintainable. I now understand how important planning, abstraction, and testing are—not just for getting things to work, but for making sure they can grow and evolve over time.
+
+Despite the challenges or maybe even because of them, I still enjoy software development maybe even more now. There’s a real sense of satisfaction that comes from building something from scratch and seeing it function in a way that’s structured and intentional. It’s not just about problem-solving—it’s about building tools that people can use and benefit from.
+
+That said, I do have a much greater appreciation for how complex software development can be. It’s not just about knowing syntax—it’s about communication, documentation, design decisions, and constantly learning. It’s made me more excited to keep growing and improving as a developer.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,25 +339,39 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+Throughout the portfolio project, I picked up a wide range of skills beyond just software development. On the technical side, I deepened my understanding of Java, especially around object oriented design, interface implementation, and abstraction. I also became more comfortable with testing and debugging, and I gained a better appreciation for clean, maintainable code.
+
+But the non-technical skills I developed were just as valuable. I improved my time management by planning out milestones and working through setbacks without falling behind. I also got better at breaking down complex tasks into smaller, more manageable pieces, which made the whole process less overwhelming. Writing documentation and reflecting on my design decisions helped me practice communicating technical ideas clearly, which is a skill I know will be important in any team setting.
+
+Overall, this project taught me how to be more self-sufficient and resourceful—how to learn independently, seek out help when needed, and stay motivated even when the solution isn’t immediately obvious.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Developed a Java-based software component from scratch, applying object-oriented design principles and interface-driven architecture
+
+- Enhanced debugging and unit testing skills to ensure functional and maintainable code
+
+- Practiced effective time management by planning project milestones and adhering to deadlines
+
+- Strengthened problem-solving skills by breaking down complex requirements into manageable development tasks
+
+- Improved technical communication through detailed documentation and code explanations
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+Working on this project has made me more interested in the topic I picked. At first, I wasn’t sure how much value a project tracking component could provide, but through designing and implementing the core functionality, I realized how useful a well-structured tracker can be—especially for long term, goal driven work. It’s shown me that even a relatively small tool can offer clarity, organization, and motivation when it’s well thought out.
+
+The experience also gave me a better appreciation for backend and component-level development, which I hadn't considered as a possible focus for my career before. Now, I’m more curious about tools and systems that help improve workflow and productivity, and I could see myself working on productivity software or internal tooling in the future. So, in that way, this project definitely helped shape and refine my interests.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+I could further study advanced topics like machine learning and cloud computing, I could build a portfolio, contribute to open-source, network, and get certifications.
 
 ### Changelog
 
