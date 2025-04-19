@@ -8,6 +8,17 @@ the following form: YYYY.0M.0D.
 
 ## [Unreleased]
 
+## 2025.04.18
+
+### Added
+
+- Designed test suite for ProjectTracker component
+- Designed two different use cases for ProjectTracker component
+
+### Updated
+
+- Changed design to implement common methods
+
 ## [2025.03.04]
 
 ### Added

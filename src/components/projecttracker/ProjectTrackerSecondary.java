@@ -1,17 +1,12 @@
-import java.util.ArrayList;
+package components.projecttracker;
+
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
- * {@code ProjectTrackerSecondary} provides an abstract implementation of the
- * {@code ProjectTracker} interface, which is responsible for tracking project
- * milestones. It includes methods to calculate project progress, send reminders
- * for approaching milestones, generate progress reports, sort milestones by
- * deadlines, and assign milestones to team members.
- *
- * This class uses a list of {@code Milestone} objects to manage and manipulate
- * milestone-related data. The class must be extended to implement methods for
- * handling milestone names and other project-specific details.
+ * Abstract class that implements the secondary methods of ProjectTracker.
  */
 public abstract class ProjectTrackerSecondary implements ProjectTracker {
 
@@ -19,14 +14,25 @@ public abstract class ProjectTrackerSecondary implements ProjectTracker {
      * A list of milestones associated with the project. Each milestone contains
      * information like name, description, status, and deadline.
      */
-    private List<Milestone> milestones;
+    private final Map<Milestone, String> milestones;
 
     /**
      * Constructs a new {@code ProjectTrackerSecondary} instance. Initializes
      * the list of milestones to an empty {@code ArrayList}.
      */
     public ProjectTrackerSecondary() {
-        this.milestones = new ArrayList<>();
+        this.milestones = new HashMap<>();
+    }
+
+    /**
+     * Returns the map of milestones.
+     *
+     * @return A map where the key is the milestone name and the value is the
+     *         milestone object.
+     */
+    @Override
+    public Map<Milestone, String> getMilestones() {
+        return this.milestones;
     }
 
     /**
@@ -80,8 +86,16 @@ public abstract class ProjectTrackerSecondary implements ProjectTracker {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getClass().getSimpleName())
                 .append(" with milestones:\n");
-        for (Milestone milestone : this.milestones) {
-            sb.append(" - ").append(milestone.toString()).append("\n");
+
+        // Iterate over the entries of the map (milestones)
+        for (Map.Entry<Milestone, String> entry : this.milestones.entrySet()) {
+            sb.append(" - Milestone Name: ").append(entry.getKey().name)
+                    .append("\n   Description: ")
+                    .append(entry.getKey().description)
+                    .append("\n   Deadline: ").append(entry.getKey().deadline)
+                    .append("\n   Status: ").append(entry.getKey().status)
+                    .append("\n   Owner: ").append(entry.getValue()) // This is the value (String, presumably the owner)
+                    .append("\n");
         }
         return sb.toString();
     }
@@ -158,6 +172,20 @@ public abstract class ProjectTrackerSecondary implements ProjectTracker {
         this.updateMilestone(milestoneName, details + " | Owner: " + owner);
         System.out.println(
                 "Milestone " + milestoneName + " assigned to " + owner);
+    }
+
+    @Override
+    public int compareTo(ProjectTracker proj) {
+        int thisSize = this.getMilestones().size();
+        int otherSize = 0;
+
+        if (proj instanceof ProjectTrackerSecondary) {
+            otherSize = ((ProjectTrackerSecondary) proj).getMilestones.size();
+        } else {
+            throw new IllegalArgumentException(
+                    "Incompatible ProjectTracker type for comparison.");
+        }
+        return Integer.compare(thisSize, otherSize);
     }
 
     /**
